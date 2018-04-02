@@ -41,6 +41,11 @@ func TestAddTwoNum(t *testing.T) {
 			l2: []int{5, 9},
 			want: []int{4, 0, 1},
 		},
+		twoNumCase{
+			l1: []int{1, 8},
+			l2: []int{0},
+			want: []int{1, 8},
+		},
 	}
 	for _, c := range tCases {
 		h1 := Slice2List(c.l1)

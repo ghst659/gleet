@@ -13,7 +13,7 @@ package gleet
 func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
     var result *ListNode
 	var previous *ListNode
-	for carry := 0; (l1 != nil && l2 != nil) || carry != 0; l1, l2 = next(l1, l2) {
+	for carry := 0; l1 != nil || l2 != nil || carry != 0; l1, l2 = next(l1, l2) {
 		sum := val(l1) + val(l2) + carry
 		digit := sum % 10
 		carry = sum / 10
